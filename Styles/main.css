@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Inter+Tight:wght@300&family=Lato:wght@300;400&family=Mukta:wght@300&family=Roboto&family=Rubik:wght@300&family=Work+Sans:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    overflow-y: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+
+    #settings-btn {
+        color: aliceblue;
+        
+        margin-right: 0.2em;
+        margin-top: 0.2em;
+        
+        border-radius: 50%;
+        transition: 0.20s;
+        cursor: pointer;
+    
+        &:hover {
+            /* background-color: rgb(28, 67, 186); */
+            transform: rotate(-90deg);
+            transition: 0.15s;
+        }
+    }
+    
+}
+
+#settings-btn {
+    border: none;
+    background-color: inherit;
+    height: 70px;
+    width: 70px;
+    font-size: 2rem;
+}
+
+main {
+    height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+    display: flex;
+    justify-content: center;
+    /* gap: 60vw; */
+
+    #timer__container {
+        display: flex;
+        width: fit-content;
+
+        .timer {
+            .popup__container {
+                background-color: rgb(228, 228, 228);
+    
+                margin-bottom: 2em;
+                padding: .5em;
+    
+                border-radius: 0.635em;
+                border: 5px double color-mix(in srgb,
+                rgb(228, 228, 228) 100%,
+                black 40%);
+    
+                #popup {
+                    font-size: 1.25rem;
+                    color: #333;
+                    font-weight: bold;
+                }
+            }
+    
+            #time {
+                margin-top: 0.15em;
+                margin-bottom: 0.42em;
+                
+                color: aliceblue;
+                font-size: 5rem;
+                font-family: 'Lato', sans-serif;
+                letter-spacing: 0.1em;
+                cursor: default;
+            }
+        }
+    
+        .btn__container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+    
+            & button {
+                color: aliceblue;
+            }
+        }
+
+        .done-session__container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            gap: .75em;
+
+            #done-session {
+                font-size: 1.75rem;
+                font-weight: bold;
+                color: aliceblue;
+    
+                cursor: default;
+            }
+        }
+
+        .current-cycle__container {
+            margin-top: 2.3em;
+            margin-bottom: 1.9em;
+            
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: .75em;
+    
+            #current-cycle {
+                font-size: 1.9rem;
+                font-weight: bold;
+                color: aliceblue;
+    
+                cursor: default;
+            }
+
+            & i {
+                color: white;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+button:not(#settings-btn, #close-btn, #save-btn) {
+    height: 70px;
+    width: 70px;
+
+    font-size: 1.5rem;
+    background-color: transparent;
+    border: 2.5px solid;  
+    border-radius: 50%;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: aliceblue;
+
+    &:active {
+        color: aliceblue;
+    }
+} 
+
+.default-theme {
+    background: rgb(81,0,185);
+    background: linear-gradient(90deg, rgba(81,0,185,1) 0%, rgba(48,19,143,1) 0%, rgba(40,99,227,1) 100%);
+}
+
+.green-theme {
+    background: rgb(144, 238, 144);
+    background: linear-gradient(90deg, rgba(144, 238, 144, 1) 0%, rgba(102, 205, 102, 1) 50%, rgba(77, 172, 77, 1) 100%); 
+}
+
+.pink-theme {
+    background: rgb(238, 40, 120);
+    background: linear-gradient(90deg, rgba(238, 40, 120, 1) 0%, rgba(204, 0, 89, 1) 50%, rgba(170, 0, 77, 1) 100%);
+}
+
+.beige-theme {
+    background: rgb(220, 220, 200);
+    background: linear-gradient(90deg, rgba(220, 220, 200, 1) 0%, rgba(209, 209, 191, 1) 50%, rgba(198, 198, 182, 1) 100%); 
+}
+
+.break-theme {
+    background: rgb(173, 216, 230);
+    background: linear-gradient(90deg, rgba(173, 216, 230, 1) 0%, rgba(197, 223, 236, 1) 50%, rgba(221, 230, 242, 1) 100%);
+}
+
+.uncover-settings {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hidden {
+    display: none;
+}

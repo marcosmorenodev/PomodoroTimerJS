@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "./Styles/main.css">
+    <link rel = "stylesheet" href = "./Styles/settings.css">
+    <script src="https://kit.fontawesome.com/62a5d9517b.js" crossorigin="anonymous"></script>
+    <title>Pomodoro App by Marcos Moreno</title>
+</head>
+<body>
+
+    <header>
+        <button id = "settings-btn">
+            <i class="fa-solid fa-gear"></i>
+        </button>
+    </header>
+
+    <main>
+        <div id="main-app__container">
+            <div id="timer__container">
+
+                <div class = "timer">
+                    <div class="popup__container hidden">
+                        <p id="popup"></p>
+                    </div>
+                    
+                    <div class="done-session__container">
+                        <p id = "done-session"></p>
+                    </div>
+
+                    <div class="current-cycle__container">
+                        <p id = "current-cycle"></p>
+                        <i class="fa-regular fa-circle-question"></i>
+                    </div>
+        
+                    <h1 id = "time">00:00</h1>
+        
+                    <div class = "btn__container">
+                        <button id = "start-btn">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+
+                        <button id = "resume-btn" class = "hidden">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+        
+                        <button id = "pause-btn" class = "hidden">
+                            <i class="fa-solid fa-pause"></i>
+                        </button>
+        
+                        <button id = "reset-btn" class = "hidden">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- *Settings tab starts below!* -->
+
+
+        <div id = "settings__container" class="hidden">
+            <form onsubmit="return false;" id="settings-tab" class="hidden">
+                <div id="close-btn-container">
+                    <button id="close-btn">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                </div>
+    
+                <div class="title__container">
+                    <h1>User Settings</h1>
+                </div>
+                
+                <div class="title__container">
+                    <h2>Custom Session Timer:</h2>
+                </div>
+    
+                <div class="input__container">
+                    <div>
+                        <h3>Active Session:</h3>
+        
+                        <label>
+                            <input
+                                id="active-minutes-input"
+                                type="range"
+                                min="5"
+                                max="90"
+                                value="0"
+                                step="1"
+                            >
+                        </label>
+        
+                        <p id="active-minutes-tag">0</p>
+                    </div>
+        
+                    <div>
+                        <h3>Break Session:</h3>
+        
+                        <label>
+                            <input
+                                id="break-minutes-input"
+                                type="range"
+                                min="2"
+                                max="30"
+                                value="0"
+                                step="1"
+                            >
+                        </label>
+        
+                        <p id="break-minutes-tag">0</p>
+                    </div>
+
+                    <div>
+                        <h3>Long Break Session:</h3>
+        
+                        <label>
+                            <input
+                                id="long-break-minutes-input"
+                                type="range"
+                                min="5"
+                                max="30"
+                                value="0"
+                                step="1"
+                            >
+                        </label>
+        
+                        <p id="long-break-minutes-tag">0</p>
+                    </div>
+                </div>
+    
+                <div class="title__container">
+                    <h2>Theme Selection:</h2>
+                </div>
+    
+                <div class="theme__container">
+                    <button data-theme="green-theme" id = "green-btn" class="theme__btn"></button>
+    
+                    <button data-theme="pink-theme" id = "pink-btn" class="theme__btn"></button>
+    
+                    <button data-theme="beige-theme" id = "beige-btn" class="theme__btn"></button>
+                </div>
+
+                <div class="default-settings__container">
+                    <button id = "default-settings-btn">
+                        Return To Default Settings
+                    </button>
+
+                    <h3 id = "default-settings-popup" class="hidden">
+                        Settings have been reset!
+                    </h3>
+                </div>
+    
+                <div class="save-btn__container">
+                    <button id = "save-btn">
+                        Save Changes 
+                        <i id = "save-btn-icon" class="fa-solid fa-floppy-disk"></i>
+                    </button>
+
+                    <h3 id = "save-popup" class="hidden">
+                        Settings saved successfully!    
+                    </h3>
+                </div> 
+    
+                <h4>Copyright 2023 - Marcos Moreno</h4>
+            </form>
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    
+    <script type="module" src = "./Scripts/app.js"></script>
+    <script type="module" src = "./Scripts/settings.js"></script>
+</body>
+</html>
